@@ -1,0 +1,6 @@
+select session_id
+from playback p
+left join ads a
+on timestamp between start_time and end_time
+and p.customer_id = a.customer_id
+where ad_id is null

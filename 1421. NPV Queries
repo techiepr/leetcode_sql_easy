@@ -1,0 +1,7 @@
+select distinct q1.id
+       ,ifnull(q1.year,0) as year
+       ,ifnull(n1.npv, 0) as npv
+from queries q1
+left join npv n1
+on q1.id = n1.id
+and q1.year = n1.year

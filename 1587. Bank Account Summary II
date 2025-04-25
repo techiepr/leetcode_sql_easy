@@ -1,0 +1,7 @@
+select u1.name as NAME
+      ,sum(amount) as BALANCE
+from users u1
+join transactions t1
+on u1.account = t1.account
+group by 1
+having balance > 10000

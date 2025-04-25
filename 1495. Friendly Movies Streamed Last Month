@@ -1,0 +1,8 @@
+select distinct c1.title as TITLE
+from content c1
+join tvprogram t1
+on c1.content_id = t1.content_id
+where c1.Kids_content = 'Y'
+and month(program_date) = '06'
+and year(program_date) = '2020'
+and c1.content_type = 'Movies'
